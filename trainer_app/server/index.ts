@@ -19,9 +19,9 @@ app.get("/", (req, res) => {
 mongoose
     .connect(MONGO_URI)
     .then(() => {
-        console.log("Connected to MongoDb");
+        console.log("Mongo connected");
         app.listen(PORT, () => {
-            console.log(`Server running on port ${PORT}`);
+            console.log(`Server running on ${PORT}`);
         });
     })
     .catch((err) => console.log(err));
